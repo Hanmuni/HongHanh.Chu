@@ -5,6 +5,18 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'HongHanh.Chu';
+export class AppComponent implements OnInit {
+  images = ['Framworks.png', 'Angular.png', 'work-station.jpeg'];
+  currentImage = 0;
+ 
+  ngOnInit()  {
+    this.updateImage();
+  }
+
+  updateImage() {
+    setInterval(() => {
+      this.currentImage++;
+      this.currentImage = this.currentImage % this.images.length;
+    }, 8000);
+  }
 }
