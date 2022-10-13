@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  images = ['Framworks.png', 'Angular.png', 'work-station.jpeg'];
+  images = ['Frameworks.png', 'Angular.png', 'work-station.jpeg'];
   currentImage = 0;
+  showImage = true;
  
   ngOnInit()  {
     this.updateImage();
@@ -17,6 +18,10 @@ export class AppComponent implements OnInit {
     setInterval(() => {
       this.currentImage++;
       this.currentImage = this.currentImage % this.images.length;
-    }, 8000);
+      this.showImage = false;
+      setTimeout(() => {
+        this.showImage = true;
+      });
+    }, 5000);
   }
 }
