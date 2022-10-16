@@ -9,8 +9,8 @@ export class AppComponent implements OnInit {
   images = ['Frameworks.png', 'Angular.png', 'work-station.jpeg'];
   currentImage = 0;
   showImage = true;
- 
-  ngOnInit()  {
+
+  ngOnInit() {
     this.updateImage();
   }
 
@@ -19,9 +19,11 @@ export class AppComponent implements OnInit {
       this.currentImage++;
       this.currentImage = this.currentImage % this.images.length;
       this.showImage = false;
+
       setTimeout(() => {
         this.showImage = true;
-      });
+      }, 100);
+
     }, 5000);
   }
 }

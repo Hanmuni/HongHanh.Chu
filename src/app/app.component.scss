@@ -1,24 +1,41 @@
 .slides-container {
-    height: 100vh;
-    width: 100vw;
-    max-width: 100%;
-    overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  overflow: hidden;
 }
 
+.slides-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    color: white;
+    font-size: 80px;
+    border-left: 16px solid red;
+  }
+}
+
+
+
 .slides-img {
-    height: 100vh;
-    width: 100vw;
-    max-width: 100%;
-    object-fit: cover;
-    animation: zoomIn 5s ease infinite;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  object-fit: cover;
+  animation: zoomIn 5s ease infinite;
 }
 
 @keyframes zoomIn {
-    from {
-        transform: scale(1);
-    }
+  from {
+    transform: scale(1);
+  }
 
-    to {
-        transform: scale(1.1);
-    }
+  to {
+    transform: scale(1.1);
+  }
 }
