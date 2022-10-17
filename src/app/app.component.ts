@@ -7,14 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   images = ['Frameworks.png', 'Angular.png', 'work-station.jpeg'];
+  headlines = ['There are many Frameworks', 'I`m learning Angular', 'Daily On My Workstation'];
   currentImage = 0;
   showImage = true;
 
   ngOnInit() {
-    this.updateImage();
+    this.showCurrentImage();
   }
 
-  updateImage() {
+  showCurrentImage() {
     setInterval(() => {
       this.currentImage++;
       this.currentImage = this.currentImage % this.images.length;
