@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SlideshowComponent } from './slideshow/slideshow.component';
 import { MenuComponent } from './menu/menu.component';
+import { ImprintComponent } from './imprint/imprint.component';
 
 
 
@@ -13,6 +14,7 @@ import { MenuComponent } from './menu/menu.component';
     AppComponent,
     SlideshowComponent,
     MenuComponent,
+    ImprintComponent,
 
   ],
   imports: [
