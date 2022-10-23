@@ -1,8 +1,9 @@
-<header>
+<header [class.headerDark]="darkMode">
 
-  <img routerLink="/" src="assets/img/menu.png">
+  <img *ngIf="!darkMode" routerLink="/" src="assets/img/menu.png">
+  <img *ngIf="darkMode" routerLink="/" src="assets/img/menu-dark.png">
 
-  <div>
+  <div [class.darkLinks]="darkMode">
 
     <a routerLink="/"> Start </a>
     <a routerLink="/"> About Me </a>
