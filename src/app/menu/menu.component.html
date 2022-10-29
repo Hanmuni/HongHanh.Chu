@@ -6,12 +6,11 @@
   <div [class.darkLinks]="darkMode">
 
     <a routerLink="/"> Start </a>
-    <a routerLink="/"> About Me </a>
-    <a routerLink="/"> Projects </a>
-    <a routerLink="/imprint"> Imprint </a>
-    <a (click)="translate.use('de');">  DE </a>
-    <a (click)="translate.use('en');"> EN </a>
-   
+    <a routerLink="/" translate> About Me </a>
+    <a routerLink="/" translate> Projects </a>
+    <a routerLink="/imprint" translate> Imprint </a>
+    <a (click)="translate.use('de');"> <img class="german-btn" src="../../assets/img/german.png"> </a>
+    <a (click)="translate.use('en');"> <img class="english-btn" src="../../assets/img/english.png"></a>
     
   </div>
 
